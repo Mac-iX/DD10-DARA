@@ -89,6 +89,15 @@ export class PromptEngine {
    * Extract DD10 module prompt
    */
   extractDD10Module(content, moduleName) {
+    // Special case for the Complete Deep Research Agent
+    if (moduleName === 'deep_research_complete') {
+      const startIndex = content.indexOf('## Complete Deep Research Agent');
+      if (startIndex === -1) return null;
+      const nextSectionIndex = content.indexOf('## Individual Deep Module Prompts', startIndex);
+      const endIndex = nextSectionIndex === -1 ? content.length : nextSectionIndex;
+      return content.substring(startIndex, endIndex).trim();
+    }
+
     const moduleMap = {
       'deep_reasoning': 'Deep Reasoning',
       'deep_interpretation': 'Deep Interpretation',

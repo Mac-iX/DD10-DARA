@@ -91,8 +91,9 @@ export class AgentRouter {
         if (input.modules && input.modules.length > 0) {
           return input.modules;
         }
-        // Otherwise, return all DD10 modules
+        // Otherwise, return all DD10 modules (including the Complete Agent)
         return [
+          'deep_research_complete',
           'deep_reasoning',
           'deep_interpretation',
           'deep_intelligence',

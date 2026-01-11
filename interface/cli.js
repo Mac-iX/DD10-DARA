@@ -79,16 +79,18 @@ class CLI {
           name: 'modules',
           message: 'Select DD10 modules to run (or press Enter for all):',
           choices: [
-            { name: 'Deep Reasoning', value: 'deep_reasoning' },
-            { name: 'Deep Interpretation', value: 'deep_interpretation' },
-            { name: 'Deep Intelligence', value: 'deep_intelligence' },
-            { name: 'Deep Storytelling', value: 'deep_storytelling' },
-            { name: 'Deep Quality Review', value: 'deep_quality_review' },
-            { name: 'Deep Looping', value: 'deep_looping' },
-            { name: 'Deep Signal Detection', value: 'deep_signal_detection' },
-            { name: 'Deep Synthesis', value: 'deep_synthesis' },
-            { name: 'Deep Structure', value: 'deep_structure' },
-            { name: 'Deep Aesthetics', value: 'deep_aesthetics' }
+            { name: '🌟 Complete Deep Research Agent (All-in-One) - Recommended for comprehensive research', value: 'deep_research_complete' },
+            new inquirer.Separator('--- Individual Modules ---'),
+            { name: 'Deep Reasoning - Multi-step logical analysis', value: 'deep_reasoning' },
+            { name: 'Deep Interpretation - Context and intent understanding', value: 'deep_interpretation' },
+            { name: 'Deep Intelligence - Information gathering and verification', value: 'deep_intelligence' },
+            { name: 'Deep Storytelling - Narrative presentation', value: 'deep_storytelling' },
+            { name: 'Deep Quality Review - Error detection and validation', value: 'deep_quality_review' },
+            { name: 'Deep Looping - Iterative refinement', value: 'deep_looping' },
+            { name: 'Deep Signal Detection - Noise filtering', value: 'deep_signal_detection' },
+            { name: 'Deep Synthesis - Connecting insights', value: 'deep_synthesis' },
+            { name: 'Deep Structure - Logical organization', value: 'deep_structure' },
+            { name: 'Deep Aesthetics - Professional presentation', value: 'deep_aesthetics' }
           ]
         }
       ]);
@@ -106,15 +108,24 @@ class CLI {
           name: 'modules',
           message: 'Select modules to run:',
           choices: [
+            { name: '🌟 DD10: Complete Deep Research Agent (All-in-One)', value: 'deep_research_complete' },
+            new inquirer.Separator('--- DARA Modules ---'),
             { name: 'DARA: Foundational Research', value: 'foundational_research' },
             { name: 'DARA: Audience Segmentation', value: 'audience_segmentation' },
             { name: 'DARA: Persona Generation', value: 'persona_generation' },
             { name: 'DARA: Simulated Inquiry', value: 'simulated_inquiry' },
             { name: 'DARA: Strategic Synthesis', value: 'strategic_synthesis' },
-            new inquirer.Separator(),
+            new inquirer.Separator('--- DD10 Individual Modules ---'),
             { name: 'DD10: Deep Reasoning', value: 'deep_reasoning' },
+            { name: 'DD10: Deep Interpretation', value: 'deep_interpretation' },
             { name: 'DD10: Deep Intelligence', value: 'deep_intelligence' },
-            { name: 'DD10: Deep Synthesis', value: 'deep_synthesis' }
+            { name: 'DD10: Deep Storytelling', value: 'deep_storytelling' },
+            { name: 'DD10: Deep Quality Review', value: 'deep_quality_review' },
+            { name: 'DD10: Deep Looping', value: 'deep_looping' },
+            { name: 'DD10: Deep Signal Detection', value: 'deep_signal_detection' },
+            { name: 'DD10: Deep Synthesis', value: 'deep_synthesis' },
+            { name: 'DD10: Deep Structure', value: 'deep_structure' },
+            { name: 'DD10: Deep Aesthetics', value: 'deep_aesthetics' }
           ],
           validate: (value) => value.length > 0 || 'Select at least one module'
         }
